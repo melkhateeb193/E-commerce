@@ -1,0 +1,38 @@
+  <div>
+    <h1 class="text-center text-success mt-4">New Products</h1>
+<div class="dropdown">
+  <a class="btn btn-success dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    {{dropDown}}
+  </a>
+  <ul class="dropdown-menu">
+<ng-container *ngFor="let Item of category" > <li><a class="dropdown-item" (click)="choose(Item)" href="#">{{Item.Name}}</a></li> </ng-container>
+  </ul>
+</div>
+  </div>
+  <div class="w-25 mx-auto text-center mb-3">
+    <p>Filter By Name</p>
+    <input type="text" placeholder="Search by Name"  class="form-control" [(ngModel)]="filterInChild">
+  </div>
+<div class="row mx-auto">
+  <ng-container   *ngFor="let Items of filterByName"   >
+  <div class="col-sm-4 p-3"   *ngIf="hideDiv" appStylesDiv >
+    <img [src]="Items.Img" alt="IMG" class="img-fluid" >
+    <h4>{{Items.Name}}</h4>
+    <div class="d-flex">
+    <p class="w-25 me-2" [ngClass]="{'border border-danger': Items.Quantity <= 1 }">Quantity: {{Items.Quantity}}</p>
+    <p class="w-50 text-light-emphasis"  >{{InStock(Items)}} </p>
+  </div>
+    <p>Category: {{Items.category.Name}}</p>
+    <div class="d-flex ">
+      <p class="pe-4 "> Price : {{Items.price}}</p>
+      <p class="text-danger" *ngIf="Items.discount !== 'No Discount'">We offer an explicit discount of: {{Items.discount }}</p>
+    </div>
+    <button [disabled]="Items.Quantity==0" class="btn btn-outline-success me-3" (click)="buy(Items)"  >Buy</button>
+    <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" >Add to card</button>
+   <div *ngIf="Items.ispurchased">
+      <p>Thanks for purchasing from our Store {{ClientName}}!</p>
+    </div>
+    <p>{{ cardNumber  | creditCard }}</p>
+  </div>
+</ng-container>
+</div>

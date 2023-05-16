@@ -1,0 +1,8 @@
+<app-product [filterInChild]="{ filter: filter, filterNum: 0 }"></app-product>
+
+<div class="w-25 mx-auto text-center mt-4 mb-4">
+  <p>Filter By Price</p>
+  <input type="text" placeholder="Search by Price"  class="form-control" [(ngModel)]="filter"  >
+  <p>filter by : {{filter}} </p>
+</div>
+<!-- -->
