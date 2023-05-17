@@ -1,0 +1,49 @@
+<!-- <app-product [filterInChild]="{ filter: filter, filterNum: 0 }"></app-product> -->
+<!-- <app-product [filterInChild]="filter"></app-product> -->
+<!-- <app-product [filterByNum]="filter" ></app-product> -->
+
+<!-- <div class="w-25 mx-auto text-center mb-3">
+  <p>Filter By Name</p>
+  <input type="text" placeholder="Search by Name" class="form-control" [(ngModel)]="filterlist">
+</div> -->
+<div>
+  <app-product [filterInChild2]="filterlist" (eventSendItem)="recieveProduct($event)"
+    (eventSendQuantity)="recieveQuantity($event)"></app-product>
+  </div>
+  <div class="row cart-section">
+    <h2 class="col">Your Cart:</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total Price</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let item of newProduct">
+        <th scope="col">1</th>
+        <th scope="col">{{ item.Name }}</th>
+      <th scope="col">{{ item.price }}</th>
+      <!-- <button class="btn" (click)="quantityNumber(item)">ay7aga</button> -->
+      <th scope="col">{{ quantityNumber(item) }}</th>
+      <!-- <th scope="col">{{ itemQuantity(item) * item.Price }}</th> -->
+       <th scope="col">
+       <!-- <div class="btn btn-danger" (click)="remove(item)">delete</div> -->
+          <!-- </th>
+        </tr>
+  </tbody>
+    </table>
+  </div> -->
+  <!-- <app-product (addToCart)="onAddToCart($event)"></app-product> -->
+
+  <!-- <div class="w-25 mx-auto text-center mt-4 mb-4">
+    <p>Filter By Price</p>
+    <input type="text" placeholder="Search by Price"  class="form-control" [(ngModel)]="filter"  >
+  </div> -->
+  <!-- -->
+
