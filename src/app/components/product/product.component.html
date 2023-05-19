@@ -6,7 +6,7 @@
   </a>
   <ul class="dropdown-menu">
 <ng-container *ngFor="let Item of category" > <li><a class="dropdown-item" (click)="choose(Item)" href="#">{{Item.Name}}</a></li> </ng-container>
-<ng-container *ngFor="let Item of category" > <li><a class="dropdown-item"  href="#">{{Item.Name}}</a></li> </ng-container>
+<!-- <ng-container *ngFor="let Item of category" > <li><a class="dropdown-item"  href="#">{{Item.Name}}</a></li> </ng-container> -->
   </ul>
 </div>
   </div>
@@ -17,8 +17,8 @@
   </div> -->
 <div class="row mx-auto">
   <ng-container   *ngFor="let Items of filteredlist"   >
-  <div class="col-sm-4 p-3"   *ngIf="hideDiv" appStylesDiv >
-    <img [src]="Items.Img" alt="IMG" class="img-fluid"  >
+  <div class="col-sm-4 p-3 overflow-hidden"   *ngIf="hideDiv" appStylesDiv >
+    <img [src]="Items.Img" alt="IMG" class="img-fluid " appStylesDiv >
     <h4>{{Items.Name}}</h4>
     <div class="d-flex">
     <p class="w-25 me-2" [ngClass]="{'border border-danger': Items.Quantity <= 1 }">Quantity: {{Items.Quantity}}</p>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Iproducts } from '../models/iproducts';
 import { DiscountOffers } from 'src/app/models/discount-offers'
+import { Icategory } from '../models/icategory';
 
 
 @Injectable({
@@ -9,8 +10,34 @@ import { DiscountOffers } from 'src/app/models/discount-offers'
 export class ProductsServiceService {
 
   productList: Iproducts[];
-  category: any;
+  // category: Icategory[] = [];
+  category: Icategory[] = [{
+    Name: "Electorines",
+    ID: 300
+  },
+  {
+    Name: "Home's Items",
+    ID: 400
+  },
+  {
+    Name: "Mobile Phones",
+    ID: 500
+  }
+  ];
   constructor() {
+    // this.category = [{
+    //     Name: "Electorines",
+    //     ID: 300
+    //   },
+    //   {
+    //     Name: "Home's Items",
+    //     ID: 400
+    //   },
+    //   {
+    //     Name: "Mobile Phones",
+    //     ID: 500
+    //   }
+    //   ]
     this.productList = [
       {
         ID: 1,
@@ -121,6 +148,19 @@ export class ProductsServiceService {
         ispurchased: false,
       },
     ]
+    // this.category = [{
+    //     Name: "Electorines",
+    //     ID: 300
+    //   },
+    //   {
+    //     Name: "Home's Items",
+    //     ID: 400
+    //   },
+    //   {
+    //     Name: "Mobile Phones",
+    //     ID: 500
+    //   }
+    //   ]
   }
 
 getAllprods(): Iproducts[]{

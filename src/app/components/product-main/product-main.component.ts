@@ -15,8 +15,6 @@ recieveProduct(value: Iproducts[]): void {
 console.log(value);
 this.newProduct=value;
 console.log(value);
-
-
 }
 recieveQuantity(value:any[]){
   console.log(value);
