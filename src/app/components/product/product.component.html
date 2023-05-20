@@ -17,7 +17,7 @@
   </div> -->
 <div class="row mx-auto">
   <ng-container   *ngFor="let Items of filteredlist"   >
-  <div class="col-sm-4 p-3 overflow-hidden"   *ngIf="hideDiv" appStylesDiv >
+  <div class="col-sm-4 p-3 overflow-hidden"  appStylesDiv >
     <img [src]="Items.Img" alt="IMG" class="img-fluid " appStylesDiv >
     <h4>{{Items.Name}}</h4>
     <div class="d-flex">
@@ -30,7 +30,8 @@
       <p class="text-danger" *ngIf="Items.discount !== 'No Discount'">We offer an explicit discount of: {{Items.discount }}</p>
     </div>
     <button [disabled]="Items.Quantity==0" class="btn btn-outline-success me-3" (click)="buy(Items)"  >Buy</button>
-    <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="onAddToCart(Items)" >Add to card</button>
+    <!-- <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="onAddToCart(Items)" >Add to card</button> -->
+    <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="prdDetails(Items.ID)" >Details</button>
    <div *ngIf="Items.ispurchased">
       <p>Thanks for purchasing from our Store {{ClientName}}!</p>
     </div>

@@ -9,5 +9,6 @@ Img:string,
 Material:string,
 discount:DiscountOffers,
 ispurchased:boolean,
-category:Icategory
+category:Icategory,
+details?:string;
 }

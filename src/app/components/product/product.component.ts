@@ -5,6 +5,7 @@ import { Iproducts } from 'src/app/models/iproducts'
 import { Icategory } from 'src/app/models/icategory'
 import { AddCart } from 'src/app/models/add-cart'
 import { ProductsServiceService } from 'src/app/services/products-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -31,7 +32,7 @@ export class ProductComponent implements OnInit, OnChanges {
   ]
   iQuantity: AddCart[] = []
   //product storage
-  constructor(private prdservce:ProductsServiceService) {
+  constructor(private prdservce:ProductsServiceService , private router:Router) {
     // instialize
     // this.productList = [
     //   {
@@ -169,7 +170,7 @@ export class ProductComponent implements OnInit, OnChanges {
   }
   set filterInChild2(value: number) {
     this._listFilterNum = value;
-    console.log("In setter",value);
+    // console.log("In setter",value);
     // console.log( this.FilterFuncNum(value))
     this.filteredlist = this.FilterFuncNum(value)
     // console.log(this.filteredlist)
@@ -238,8 +239,6 @@ export class ProductComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     // this.filterByName = this.productList
     this.filteredlist = this.prdservce.productList
-    console.log(this.filteredlist);
-
   }
 
   /// count down the Quantity
@@ -278,5 +277,9 @@ this.eventSendItem.emit(this.addtoCart)
   // on change
   ngOnChanges(): void {
     this.filterInChild2;
+  }
+  prdDetails(prodId :number) {
+  this.router.navigate(['/prdDetails',prodId])
+  // console.log(prodId);
   }
 }

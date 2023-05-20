@@ -10,7 +10,6 @@ import { Icategory } from '../models/icategory';
 export class ProductsServiceService {
 
   productList: Iproducts[];
-  // category: Icategory[] = [];
   category: Icategory[] = [{
     Name: "Electorines",
     ID: 300
@@ -25,19 +24,6 @@ export class ProductsServiceService {
   }
   ];
   constructor() {
-    // this.category = [{
-    //     Name: "Electorines",
-    //     ID: 300
-    //   },
-    //   {
-    //     Name: "Home's Items",
-    //     ID: 400
-    //   },
-    //   {
-    //     Name: "Mobile Phones",
-    //     ID: 500
-    //   }
-    //   ]
     this.productList = [
       {
         ID: 1,
@@ -48,7 +34,8 @@ export class ProductsServiceService {
         category: this.category[1],
         Img:
           'https://media.homecentre.com/i/homecentre/162104521-162104521-HC171219_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        ispurchased: false,
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
+          ispurchased: false,
         discount: DiscountOffers.ten,
       },
       {
@@ -60,6 +47,7 @@ export class ProductsServiceService {
           'https://media.homecentre.com/i/homecentre/163645951-163645951-HC07102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
         Material: 'Metal',
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         ispurchased: false,
         discount: DiscountOffers.fiften,
       },
@@ -72,6 +60,7 @@ export class ProductsServiceService {
           'https://media.homecentre.com/i/homecentre/160079085-160079085-HC020518_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
         Material: 'Metal',
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         ispurchased: false,
         discount: DiscountOffers.none,
       },
@@ -83,6 +72,7 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/161257427-161257427-HC280119_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
         discount: DiscountOffers.ten,
         ispurchased: false,
@@ -95,6 +85,7 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/162640761-162640761-HC23092020_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
         discount: DiscountOffers.fiften,
         ispurchased: false,
@@ -107,6 +98,7 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/159671547-159671547-HCB1226OCT17_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
         discount: DiscountOffers.none,
         ispurchased: false,
@@ -119,6 +111,7 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/163723189-163568026-HC16082021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Wood',
         discount: DiscountOffers.none,
         ispurchased: false,
@@ -131,6 +124,7 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/161684469-161684469-HC210519_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[1],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'MDF',
         discount: DiscountOffers.ten,
         ispurchased: false,
@@ -143,24 +137,13 @@ export class ProductsServiceService {
         Img:
           'https://media.homecentre.com/i/homecentre/163688823-163688823-HC05102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         category: this.category[0],
+        details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'wood',
         discount: DiscountOffers.fiften,
         ispurchased: false,
       },
     ]
-    // this.category = [{
-    //     Name: "Electorines",
-    //     ID: 300
-    //   },
-    //   {
-    //     Name: "Home's Items",
-    //     ID: 400
-    //   },
-    //   {
-    //     Name: "Mobile Phones",
-    //     ID: 500
-    //   }
-    //   ]
+
   }
 
 getAllprods(): Iproducts[]{
@@ -173,5 +156,15 @@ return this.productList;
 
       }
       return this.productList.filter(p => p.price <= filter);
+    }
+    getProductById(prodId:number):Iproducts|undefined {
+      return this.productList.find(prd=> prd.ID === prodId);
+    }
+    getcategoryByID(catID:number):Icategory|undefined {
+      return this.category.find(cat=> cat.ID === catID);
+    }
+    //return array of Ids
+    getIDsOfProducts():number[] {
+      return this.productList.map(prd=> prd.ID);
     }
 }
