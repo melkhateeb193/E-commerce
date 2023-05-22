@@ -6,6 +6,7 @@ import { Icategory } from 'src/app/models/icategory'
 import { AddCart } from 'src/app/models/add-cart'
 import { ProductsServiceService } from 'src/app/services/products-service.service';
 import { Router } from '@angular/router';
+import { ProductsWithApiService } from 'src/app/services/products-with-api.service';
 
 @Component({
   selector: 'app-product',
@@ -17,22 +18,10 @@ export class ProductComponent implements OnInit, OnChanges {
   //stores
   store: Store = new Store("ADIDAS", ["Cairo", "Giza", "Alexanderia"], "https://img.freepik.com/free-photo/pair-trainers_144627-3800.jpg?w=740&t=st=1683776488~exp=1683777088~hmac=5d01d8f477d0a90584d9ae2ab778a76d93a8a0a500fb260d1dd94e36d20ecb6b");
   // category
-  category: Icategory[] = [{
-    Name: "Electorines",
-    ID: 300
-  },
-  {
-    Name: "Home's Items",
-    ID: 400
-  },
-  {
-    Name: "Mobile Phones",
-    ID: 500
-  }
-  ]
-  iQuantity: AddCart[] = []
+  category: Icategory[] = [];
+  iQuantity: AddCart[] = [];
   //product storage
-  constructor(private prdservce:ProductsServiceService , private router:Router) {
+  constructor(private prdservce:ProductsServiceService , private router:Router,private prdApiService:ProductsWithApiService ) {
     // instialize
     // this.productList = [
     //   {
@@ -146,6 +135,11 @@ export class ProductComponent implements OnInit, OnChanges {
     // ]
   }
 
+getCategoryName(catID:number): string {
+  let Name:any = this.category?.find( (cate)=>cate.ID === catID)
+  // this.prdApiService.getCategorybyID(catID).subscribe({next:(cat)=>{category = cat;}})
+   return Name?.Name
+}
 
   addtoCart: Iproducts[] = [];
   // product list array
@@ -163,15 +157,17 @@ export class ProductComponent implements OnInit, OnChanges {
   // }
 
   //filtter by number
+
   private _listFilterNum: number = 0;
   filteredlist: Iproducts[] = [];
+  productlist: Iproducts[] = [];
   @Input() get filterInChild2(): number {
     return this._listFilterNum;
   }
   set filterInChild2(value: number) {
     this._listFilterNum = value;
     // console.log("In setter",value);
-    // console.log( this.FilterFuncNum(value))
+    console.log( this.FilterFuncNum(value))
     this.filteredlist = this.FilterFuncNum(value)
     // console.log(this.filteredlist)
   }
@@ -219,12 +215,12 @@ export class ProductComponent implements OnInit, OnChanges {
 
   // filter by Number
   FilterFuncNum(filter: number): Iproducts[] {
+    // console.log(filter)
     // return this.productList.filter((product: Iproducts) => product.price <= filter);
     if (filter == 0 || filter == null) {
-      return this.prdservce.productList;
-
+      return this.productlist;
     }
-    return this.prdservce.productList.filter(p => p.price <= filter);
+    return this.productlist.filter(p => p.price <= filter);
   }
   // switch case for the stock
   InStock(Items: Iproducts): string {
@@ -238,7 +234,21 @@ export class ProductComponent implements OnInit, OnChanges {
   //to show all product before filter
   ngOnInit(): void {
     // this.filterByName = this.productList
-    this.filteredlist = this.prdservce.productList
+    // this.filteredlist = this.prdservce.productList
+    this.prdApiService.getAllproducts().subscribe({
+      next:(data)=>{
+        this.productlist=data;
+        this.filteredlist = this.productlist
+        // console.log(this.filteredlist)
+      },
+      error:(err)=>{}
+    })
+    this.prdApiService.getCategory().subscribe({
+      next:(data)=>{
+        this.category=data;
+      },
+      error:(err)=>{}
+    })
   }
 
   /// count down the Quantity

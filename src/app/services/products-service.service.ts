@@ -31,12 +31,12 @@ export class ProductsServiceService {
         price: 21500,
         Quantity: 2,
         Material: 'Glass',
-        category: this.category[1],
+        category: 400,
         Img:
           'https://media.homecentre.com/i/homecentre/162104521-162104521-HC171219_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
           ispurchased: false,
-        discount: DiscountOffers.ten,
+        discount: 0,
       },
       {
         ID: 2,
@@ -45,11 +45,11 @@ export class ProductsServiceService {
         Quantity: 8,
         Img:
           'https://media.homecentre.com/i/homecentre/163645951-163645951-HC07102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         Material: 'Metal',
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         ispurchased: false,
-        discount: DiscountOffers.fiften,
+        discount: 10,
       },
       {
         ID: 3,
@@ -58,11 +58,11 @@ export class ProductsServiceService {
         Quantity: 10,
         Img:
           'https://media.homecentre.com/i/homecentre/160079085-160079085-HC020518_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         Material: 'Metal',
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         ispurchased: false,
-        discount: DiscountOffers.none,
+        discount:20,
       },
       {
         ID: 4,
@@ -71,10 +71,10 @@ export class ProductsServiceService {
         Quantity: 0,
         Img:
           'https://media.homecentre.com/i/homecentre/161257427-161257427-HC280119_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
-        discount: DiscountOffers.ten,
+        discount: 30,
         ispurchased: false,
       },
       {
@@ -84,10 +84,10 @@ export class ProductsServiceService {
         Quantity: 2,
         Img:
           'https://media.homecentre.com/i/homecentre/162640761-162640761-HC23092020_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
-        discount: DiscountOffers.fiften,
+        discount: 40,
         ispurchased: false,
       },
       {
@@ -97,10 +97,10 @@ export class ProductsServiceService {
         Quantity: 10,
         Img:
           'https://media.homecentre.com/i/homecentre/159671547-159671547-HCB1226OCT17_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Upholstered Seating',
-        discount: DiscountOffers.none,
+        discount: 0,
         ispurchased: false,
       },
       {
@@ -110,10 +110,10 @@ export class ProductsServiceService {
         Quantity: 0,
         Img:
           'https://media.homecentre.com/i/homecentre/163723189-163568026-HC16082021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'Wood',
-        discount: DiscountOffers.none,
+        discount: 50,
         ispurchased: false,
       },
       {
@@ -123,10 +123,10 @@ export class ProductsServiceService {
         Quantity: 4,
         Img:
           'https://media.homecentre.com/i/homecentre/161684469-161684469-HC210519_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[1],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'MDF',
-        discount: DiscountOffers.ten,
+        discount: 10,
         ispurchased: false,
       },
       {
@@ -136,10 +136,10 @@ export class ProductsServiceService {
         Quantity: 3,
         Img:
           'https://media.homecentre.com/i/homecentre/163688823-163688823-HC05102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$',
-        category: this.category[0],
+        category: 400,
         details:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.',
         Material: 'wood',
-        discount: DiscountOffers.fiften,
+        discount: 10,
         ispurchased: false,
       },
     ]

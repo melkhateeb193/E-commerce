@@ -7,8 +7,8 @@ Quantity:number,
 price:number,
 Img:string,
 Material:string,
-discount:DiscountOffers,
+discount:number,
 ispurchased:boolean,
-category:Icategory,
+category:number,
 details?:string;
 }

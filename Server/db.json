@@ -1,0 +1,132 @@
+ {
+  "products":[
+
+      {
+        "ID": 1,
+        "Name": "Wilma 6-Seater Glass Dining Table",
+        "price": 21500,
+        "Quantity": 2,
+        "Material": "Glass",
+        "category": 400,
+        "Img": "https://media.homecentre.com/i/homecentre/162104521-162104521-HC171219_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "ispurchased": false,
+        "discount": 30
+      },
+      {
+        "ID": 2,
+        "Name": "Trixia 4-Seater Glass Top Dining Table",
+        "price": 30000,
+        "Quantity": 8,
+        "Img": "https://media.homecentre.com/i/homecentre/163645951-163645951-HC07102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category":400,
+        "Material": "Metal",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "ispurchased": false,
+        "discount": 20
+      },
+      {
+        "ID": 3,
+        "Name": "Gasha Marble Top Side Table",
+        "price": 14000,
+        "Quantity": 10,
+        "Img": "https://media.homecentre.com/i/homecentre/160079085-160079085-HC020518_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "Material": "Metal",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "ispurchased": false,
+        "discount": 10
+      },
+      {
+        "ID": 4,
+        "Name": "Ventura Fabric Dining Chair",
+        "price": 1500,
+        "Quantity": 0,
+        "Img": "https://media.homecentre.com/i/homecentre/161257427-161257427-HC280119_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "Upholstered Seating",
+        "discount": 0,
+        "ispurchased": false
+      },
+      {
+        "ID": 5,
+        "Name": "Ventura Fabric Dining Chair",
+        "price": 1500,
+        "Quantity": 2,
+        "Img": "https://media.homecentre.com/i/homecentre/162640761-162640761-HC23092020_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "Upholstered Seating",
+        "discount": 40,
+        "ispurchased": false
+      },
+      {
+        "ID": 6,
+        "Name": "Boston Study Chair",
+        "price": 1000,
+        "Quantity": 10,
+        "Img": "https://media.homecentre.com/i/homecentre/159671547-159671547-HCB1226OCT17_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "Upholstered Seating",
+        "discount": 30,
+        "ispurchased": false
+      },
+      {
+        "ID": 7,
+        "Name": "Coby Extendable TV Unit",
+        "price": 13000,
+        "Quantity": 0,
+        "Img": "https://media.homecentre.com/i/homecentre/163723189-163568026-HC16082021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "Wood",
+        "discount": 20,
+        "ispurchased": false
+      },
+      {
+        "ID": 8,
+        "Name": "Accent TV Unit",
+        "price": 36999,
+        "Quantity": 4,
+        "Img": "https://media.homecentre.com/i/homecentre/161684469-161684469-HC210519_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "MDF",
+        "discount": 10,
+        "ispurchased": false
+      },
+      {
+        "ID": 9,
+        "Name": "Plymouth TV Unit",
+        "price": 36999,
+        "Quantity": 3,
+        "Img": "https://media.homecentre.com/i/homecentre/163688823-163688823-HC05102021_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-d-sqr-pdp$",
+        "category": 400,
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, earum quod animi quos nesciunt blanditiis optio repellat incidunt! Optio, et.",
+        "Material": "wood",
+        "discount": 0,
+        "ispurchased": false
+      }
+   ],
+
+   "category":[
+    {
+    "ID":100,
+    "Name": "Wood"
+   },
+    {
+    "ID":200,
+    "Name": "steel"
+   },
+    {
+    "ID":300,
+    "Name": "electronics"
+   },
+    {
+    "ID":400,
+    "Name": "mobiles"
+   }
+  ]
+}

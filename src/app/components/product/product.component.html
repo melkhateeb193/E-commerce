@@ -24,20 +24,18 @@
     <p class="w-25 me-2" [ngClass]="{'border border-danger': Items.Quantity <= 1 }">Quantity: {{Items.Quantity}}</p>
     <p class="w-50 text-light-emphasis"  >{{InStock(Items)}} </p>
   </div>
-    <p>Category: {{Items.category.Name}}</p>
+    <p>Category: {{getCategoryName(Items.category)}}</p>
     <div class="d-flex ">
       <p class="pe-4 "> Price : {{Items.price}}</p>
-      <p class="text-danger" *ngIf="Items.discount !== 'No Discount'">We offer an explicit discount of: {{Items.discount }}</p>
+      <p class="text-danger" *ngIf="Items.discount !== 0 ">We offer an explicit discount of: {{Items.discount/100|percent:'2.0-5' }}</p>
     </div>
     <button [disabled]="Items.Quantity==0" class="btn btn-outline-success me-3" (click)="buy(Items)"  >Buy</button>
-    <!-- <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="onAddToCart(Items)" >Add to card</button> -->
+    <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="onAddToCart(Items)" >Add to card</button>
     <button [disabled]="Items.Quantity==0" class="btn btn-outline-warning" (click)="prdDetails(Items.ID)" >Details</button>
    <div *ngIf="Items.ispurchased">
       <p>Thanks for purchasing from our Store {{ClientName}}!</p>
     </div>
     <p>{{ cardNumber  | creditCard }}</p>
   </div>
-
 </ng-container>
-
 </div>

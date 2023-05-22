@@ -15,6 +15,7 @@ import { HomePageComponent } from './components/home-page/home-page/home-page.co
 import { AboutUsComponent } from './components/AboutUs/about-us/about-us.component';
 import { ContactUsComponent } from './components/ContactUs/contact-us/contact-us.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

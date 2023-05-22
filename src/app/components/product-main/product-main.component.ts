@@ -12,12 +12,12 @@ export class ProductMainComponent {
   newProduct:Iproducts[] =[];
   Quantity:any []=[] ;
 recieveProduct(value: Iproducts[]): void {
-console.log(value);
+// console.log(value);
 this.newProduct=value;
-console.log(value);
+// console.log(value);
 }
 recieveQuantity(value:any[]){
-  console.log(value);
+  // console.log(value);
 this.Quantity=value;
 }
 quantityNumber(e:Iproducts):number{

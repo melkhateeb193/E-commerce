@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Iproducts } from 'src/app/models/iproducts';
 import { ProductsServiceService } from 'src/app/services/products-service.service';
+import { ProductsWithApiService } from 'src/app/services/products-with-api.service';
 
 @Component({
   selector: 'app-product-details',
@@ -16,10 +17,13 @@ export class ProductDetailsComponent implements OnInit {
   // product:Iproducts |null = null;
 // return IDS
 productIDsArr:number[] = [];
+//prdReaslt after search
+prdReasultAfterSearch:Iproducts[]=[];
 
 //
 returnedCurrentIndex:number = 0;
-constructor(private productService: ProductsServiceService,private activatedroute: ActivatedRoute ,private router:Router ){
+  // prdApiService: any;
+constructor(private prdApiService:ProductsWithApiService,private productService: ProductsServiceService,private activatedroute: ActivatedRoute ,private router:Router ){
 
 }
   ngOnInit(): void {
@@ -28,10 +32,9 @@ constructor(private productService: ProductsServiceService,private activatedrout
 // this.product = this.productService.getProductById(this.prodId);
 // console.log(this.product)
 this.productIDsArr = this.productService.getIDsOfProducts();
-console.log(this.productIDsArr[0]);
+// console.log(this.productIDsArr[0]);
 this.activatedroute.paramMap.subscribe(params => {
 this.prodId=(params.get('productID'))?Number(params.get('productID')) : 0;
-
 let reasultofFun = this.productService.getProductById(this.prodId);
 if (reasultofFun){
 this.product = reasultofFun;
@@ -55,4 +58,12 @@ this.product = reasultofFun;
     //  console.log(this.returnedCurrentIndex);
         this.router.navigate(['/prdDetails',this.productIDsArr[++this.returnedCurrentIndex]])
   }
+
+  searchByPrdMaterials(searchVal:any){
+this.prdApiService.searchByPrdMaterials(searchVal).subscribe((data)=>{
+  // console.log(searchVal)
+this.prdReasultAfterSearch=data;
+// console.log(this.prdReasultAfterSearch)
+})
+}
 }
